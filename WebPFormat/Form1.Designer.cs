@@ -39,6 +39,7 @@
             // 
             // button1
             // 
+            this.button1.AllowDrop = true;
             this.button1.Location = new System.Drawing.Point(14, 13);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(350, 54);
@@ -46,6 +47,8 @@
             this.button1.Text = "选择文件";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.DragDrop += new System.Windows.Forms.DragEventHandler(this.button1_DragDrop);
+            this.button1.DragEnter += new System.Windows.Forms.DragEventHandler(this.button1_DragEnter);
             // 
             // groupBox1
             // 
@@ -107,9 +110,10 @@
             // 
             // Form1
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 149);
+            this.ClientSize = new System.Drawing.Size(377, 146);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("宋体", 10F);
@@ -117,7 +121,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "WebPFormat";
+            this.Text = "WebPFormat 2.0     By: Healer";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
